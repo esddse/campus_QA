@@ -1,0 +1,3 @@
+model_checkpoint_path: "C:\\Users\\tjz42\\Desktop\\campus_QA\\questionClassifier\\runs\\1488337111\\checkpoints\\model-40"
+all_model_checkpoint_paths: "C:\\Users\\tjz42\\Desktop\\campus_QA\\questionClassifier\\runs\\1488337111\\checkpoints\\model-20"
+all_model_checkpoint_paths: "C:\\Users\\tjz42\\Desktop\\campus_QA\\questionClassifier\\runs\\1488337111\\checkpoints\\model-40"
