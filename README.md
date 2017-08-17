@@ -9,8 +9,10 @@
 
 ### 运行方式(暂时):
 
-1. 将 util.py 里的 ``../`` 全部替换为 ``./``
-2. 使用命令``python3 QAsystem.py``运行
+1. 交互式：使用命令``python3 QAsystem.py``运行
+2. 文件式(批量式)：使用命令``python3 QAsystem.py -f <filename>``运行,如``python3 QAsystem.py -f ./data/test_questions``
+
+
 
 ### 文件结构:
 
