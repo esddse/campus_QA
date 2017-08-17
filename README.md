@@ -35,7 +35,17 @@
 
 ## TODO 王一雪
 
-### 项目部署在服务器上
+### 项目部署在服务器上【**<font color=red>已完成</font>**】
+
+**************************
+
+此部分已完成，**<font color=red >注意以下几点</font>**
+
+* 项目地址在``/home/esddse/campusQA``,复制一份到自己的目录
+* 复制后，需要修改模型的记录的路径,如使用qaMatcher的模型，修改``/home/esddse/campusQA/campusQA/qaMatcher/runs/1488501806/checkpoints/checkpoint``里面的路径为当前模型的路径
+* 运行前不要忘记打开虚拟环境
+
+**************************
 
 原因：1、PC速度慢、内存小，模型受到限制  2. 编写可视化界面的需求
 
