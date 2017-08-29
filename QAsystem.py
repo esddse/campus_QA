@@ -73,6 +73,9 @@ class QuestionAnsweringSystem(object):
 		for result in sorted_results:
 			print(result[0],' ',result[1])
 
+		# 以下部分和问答服务有关，不修改
+		# ==========================================================
+
 		if is_server == True:
 			answers_text = ''
 			if sorted_results is None:
