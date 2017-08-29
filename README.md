@@ -107,6 +107,12 @@ cd /home/esddse/campusQA/web
 . run.sh
 ```
 
+**【注意】**
+
+为了系统能够支持在线服务,[QAsystem.py](https://github.com/esddse/campus_QA/blob/master/QAsystem.py)也做了改动
+
+与模型修改相关的地方见[代码注释](https://github.com/esddse/campus_QA/blob/master/QAsystem.py#L76),注意修改模型不要修改注释之下的代码
+
 
 ### 数据
 
