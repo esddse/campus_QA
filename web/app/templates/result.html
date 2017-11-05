@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block styles %}
+	{{ super() }}
+{% endblock %}
+
+{% block scripts %}
+	{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+	<div class="container">
+		{% for answer in answers %}
+        <p>{{ answer[0] }} &nbsp; {{ answer[1] }}</p><br>
+        {% endfor %}
+	</div>
+{% endblock %}

@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block styles %}
+	{{ super() }}
+{% endblock %}
+
+{% block scripts %}
+	{{ super() }}
+
+	<script>
+	function getAnswer(){
+
+		var question = document.getElementById("question").value;
+		if (question == ''){
+			return;
+		}
+
+		$(".answerpad").slideUp("fast", function(){
+			$.post("/esddse",
+				{
+					question: question,
+				},
+				function(data, status){
+					$(".answerpad").empty();
+					$(".answerpad").append("<div class=\"first\"><h2>"+data.answer[0][0].replace(/\n/g, "<br>")+"</h2></div>")
+					$(".answerpad").append("<div class=\"other\">")
+
+					$(".answerpad .other").append("<h3>其他可能的答案:</h3>")
+					for(var i = 1; i < data.answer.length; i++){
+						if(data.answer[i][0] != ""){
+							$(".answerpad .other").append("<div>"+data.answer[i][0].replace(/\n/g, "<br>")+"</div>");
+						}
+					}
+
+					$(".answerpad").slideDown("slow");
+
+				}
+			);
+		});
+
+	}
+	
+	
+	</script>
+{% endblock %}
+
+{% block content %}
+	<div id="home">
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 centered">
+						<form action="" method="post", name="question" ">
+							<h1>campus<span>QA</span></h1>
+							{{ form.hidden_tag() }}
+							<div class="search_box">
+								{{ form.question(size=30) }}
+								<input type="button" class="search_btn" onclick="return getAnswer();" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="answerpad">
+
+		</div>
+
+	</div>
+
+
+{% endblock %}

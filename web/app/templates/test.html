@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>campusQA</title>
+
+    <link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<script src="../static/js/bootstrap.js"></script>
+    <script src="../static/js/jquery-3.2.1.js"></script>
+    <script src="../static/js/chart.js"></script>
+
+    
+ 
+</head>
+
+<body>
+	<div id="home">
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 centered">
+						<form action="" method="post", name="question">
+							<h1>campus<span>QA</span></h1>
+							{{ form.hidden_tag() }}
+							<div class="search_box">
+								{{ form.question(size=30) }}
+								<input class="search_btn", type="submit", value="">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="answers">
+			{% with messages = get_flashed_messages() %}
+	  			{% if messages %}
+	    			<ul class=flashes>
+	    			{% for message in messages[0] %}
+	      			<li>{{ message }}</li>
+	    			{% endfor %}
+	    			</ul>
+	  			{% endif %}
+			{% endwith %}
+		</div>
+	</div>
+</body>
+
+</html>
